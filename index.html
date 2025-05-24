@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZEMS Event Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>Zen Events Management Services Registration</header>
+    <main>
+      <div class="content" id="searchView">
+        <h2>Welcome to Celine's 18th Birthday!</h2>
+        <p>We're checking you in now. Your seat number will appear shortly. 🥂 🎉</p>
+        <input type="text" id="nameInput" placeholder="Enter Guest Name">
+        <div id="suggestions" class="suggestions hidden"></div>
+      </div>
+
+      <div class="content hidden" id="guestView">
+        <h2 id="tableHeading"></h2>
+        <p>Enjoy the evening and the celebration of Celine's 18th birthday! 🎊</p>
+        <div class="guest-name" id="selectedName"></div>
+        <div class="label">Here are the guests seated with you</div>
+        <div class="chip-container" id="guestChips"></div>
+      </div>
+
+      <div class="content hidden" id="adminView">
+        <h2>Confirmed Guests</h2>
+        <ul id="confirmedList"></ul>
+        <button onclick="exportCSV()">Download CSV</button>
+      </div>
+    </main>
+    <footer>
+      <button class="clear-btn" id="backBtn">Back</button>
+      <button class="search-btn" id="searchBtn">Search Guest</button>
+      <button class="confirm-btn hidden" id="confirmBtn">Confirm Seat</button>
+      <!-- <button class="admin-btn" id="adminBtn">Admin View</button> -->
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
